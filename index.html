@@ -5,69 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Kanny's Games is an indie mobile game developer focused on creating simple, fun, and skill-based games for Android users."
+      content="Kanny's Game Room — a premium collection of classic card games for Android. Play Klondike Solitaire, FreeCell, and Pyramid Solitaire with Kanny's witty commentary. Download free on Google Play."
     />
-    <title>Kanny's Games | Indie Mobile Game Developer</title>
+    <meta property="og:title" content="Kanny's Games | Classic Card Games for Android" />
+    <meta property="og:description" content="Think you've got the cards? Kanny isn't convinced. Download Kanny's Game Room — free on Google Play." />
+    <meta property="og:image" content="hero.png" />
+    <meta property="og:type" content="website" />
+    <title>Kanny's Games | Classic Card Games for Android</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header hero">
-      <div class="container hero-content">
-        <!-- Hero image placeholder: replace with the provided image file -->
-        <img
-          class="hero-image"
-          src="hero.png"
-          alt="Kanny's Games hero artwork"
-        />
+
+    <!-- ───── NAV ───── -->
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <span class="nav-logo">♠ Kanny's Games</span>
+        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.thebytedeveloper.kannysgameroom" target="_blank" rel="noopener noreferrer">
+          Download Free
+        </a>
+      </div>
+    </nav>
+
+    <!-- ───── HERO ───── -->
+    <header class="hero">
+      <div class="hero-suits" aria-hidden="true">
+        <span>♠</span><span>♥</span><span>♣</span><span>♦</span>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Kanny's Games presents</p>
+          <h1 class="hero-title">Kanny's<br>Game Room</h1>
+          <p class="hero-tagline">"Think you've got the cards?<br>Kanny isn't convinced."</p>
+          <div class="hero-badges">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.thebytedeveloper.kannysgameroom"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="play-badge-link"
+            >
+              <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                alt="Get it on Google Play"
+                class="play-badge"
+              />
+            </a>
+          </div>
+          <p class="hero-meta">Free · Offline Play · No Account Needed</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img
+            src="hero.png"
+            alt="Kanny's Game Room — card game screenshot"
+            class="hero-image"
+          />
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      <section id="games" class="section">
-        <h2>Games</h2>
-        <div class="games-grid">
-          <!-- Game cards -->
-          <article class="game-card">
-            <h3>Kanny's Klondike</h3>
-            <p>
-              A classic solitaire experience with clean visuals and smooth
-              gameplay for focused, relaxing play sessions.
-            </p>
-            <a class="button" href="https://play.google.com/store" rel="noopener">
-              View on Google Play
-            </a>
-          </article>
+    <main>
 
-          <article class="game-card">
-            <h3>Kanny's High Low – Test Your Luck</h3>
-            <p>
-              Guess higher or lower and build your streak in this quick,
-              skill-based numbers game.
-            </p>
-            <a class="button" href="https://play.google.com/store" rel="noopener">
-              View on Google Play
-            </a>
-          </article>
+      <!-- ───── ABOUT / GAMES INSIDE ───── -->
+      <section class="section section-games" id="games">
+        <div class="container">
+          <div class="section-label">The Game</div>
+          <h2 class="section-title">One App. Three Classic Card Games.</h2>
+          <p class="section-intro">
+            Step into Kanny's world — an elegant card room where every move is watched,
+            every victory is earned, and every mistake becomes part of the story.
+          </p>
+          <div class="games-grid">
 
-          <article class="game-card">
-            <h3>Kanny's Puzzle Sprint</h3>
-            <p>
-              Short, satisfying puzzles designed for quick bursts of fun and
-              rewarding mastery.
-            </p>
-            <a class="button" href="https://play.google.com/store" rel="noopener">
-              View on Google Play
+            <article class="game-tile">
+              <div class="game-tile-suit">♠</div>
+              <h3>Klondike Solitaire</h3>
+              <p>The timeless classic. Build your tableau, uncover the deck, and send every suit home — if Kanny lets you.</p>
+            </article>
+
+            <article class="game-tile">
+              <div class="game-tile-suit">♣</div>
+              <h3>FreeCell</h3>
+              <p>Four free cells, four foundations, and a puzzle that rewards careful planning. Every deal is solvable. Are you?</p>
+            </article>
+
+            <article class="game-tile">
+              <div class="game-tile-suit">♦</div>
+              <h3>Pyramid Solitaire</h3>
+              <p>Match pairs that sum to 13 and dismantle the pyramid card by card. Simple rules, satisfying strategy.</p>
+            </article>
+
+            <article class="game-tile game-tile-soon">
+              <div class="game-tile-suit">♥</div>
+              <h3>More Coming Soon</h3>
+              <p>Kanny's Game Room grows with regular updates. New card game challenges are always on the horizon.</p>
+            </article>
+
+          </div>
+          <div class="games-cta">
+            <a
+              class="button button-gold"
+              href="https://play.google.com/store/apps/details?id=com.thebytedeveloper.kannysgameroom"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play All Three — Free on Google Play
             </a>
-          </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───── MEET KANNY ───── -->
+      <section class="section section-kanny" id="kanny">
+        <div class="container kanny-inner">
+          <div class="kanny-text">
+            <div class="section-label section-label-light">Your Host</div>
+            <h2 class="section-title section-title-light">Meet Kanny</h2>
+            <p>
+              Kanny isn't your average game host. He watches your moves, celebrates your
+              victories, and questions your decisions — occasionally reminding you that
+              perhaps that last move wasn't your finest moment.
+            </p>
+            <ul class="kanny-traits">
+              <li>🎩 Witty, sarcastic commentary on every game</li>
+              <li>🏆 Cheers your wins — genuinely (mostly)</li>
+              <li>😏 Never lets a bad move go unnoticed</li>
+              <li>👑 Sets the standard. Can you impress him?</li>
+            </ul>
+          </div>
+          <blockquote class="kanny-quote">
+            <p>"Anyone can shuffle cards.<br>Winning consistently is<br>another matter entirely."</p>
+            <cite>— Kanny</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ───── FEATURES ───── -->
+      <section class="section section-features" id="features">
+        <div class="container">
+          <div class="section-label">Why You'll Stay</div>
+          <h2 class="section-title">Built for Card Game Lovers</h2>
+          <div class="features-grid">
+
+            <div class="feature-card">
+              <div class="feature-icon">🪙</div>
+              <h3>Earn Coins &amp; Rewards</h3>
+              <p>Win games, complete challenges, and build your coin collection as you improve.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📡</div>
+              <h3>Fully Offline</h3>
+              <p>No Wi-Fi? No problem. Kanny's Game Room plays anywhere, anytime, no internet required.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🏅</div>
+              <h3>Achievements &amp; Challenges</h3>
+              <p>Daily challenges, objectives, and a growing achievement list to keep every session meaningful.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Track Your Progress</h3>
+              <p>Games played, win percentage, and personal stats — watch yourself climb toward Kanny's elite.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <h3>Premium Aesthetic</h3>
+              <p>Rich green-and-gold visuals, smooth card animations, and premium sound design — built to feel luxurious.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🚀</div>
+              <h3>No Account Needed</h3>
+              <p>Launch, pick a game, and play. No sign-ups, no logins, no hassle. Just cards.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ───── DOWNLOAD CTA ───── -->
+      <section class="section section-cta">
+        <div class="container cta-inner">
+          <div class="cta-suits" aria-hidden="true">♠ ♥ ♣ ♦</div>
+          <h2>Can You Impress Kanny?</h2>
+          <p>Download Kanny's Game Room free on Google Play and find out.</p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.thebytedeveloper.kannysgameroom"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="play-badge-link"
+          >
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              alt="Get it on Google Play"
+              class="play-badge play-badge-lg"
+            />
+          </a>
+          <p class="cta-meta">Free · Android · Offline Play · Regular Updates</p>
         </div>
       </section>
 
     </main>
 
+    <!-- ───── FOOTER ───── -->
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 Kanny's Games. All rights reserved.</p>
+      <div class="container footer-inner">
+        <div class="footer-brand">♠ Kanny's Games</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="https://play.google.com/store/apps/dev?id=5169909982344144360" target="_blank" rel="noopener noreferrer">Developer Profile</a>
+          <a href="https://play.google.com/store/apps/details?id=com.thebytedeveloper.kannysgameroom" target="_blank" rel="noopener noreferrer">Kanny's Game Room</a>
+        </nav>
+        <p class="footer-copy">© 2026 Kanny's Games. All rights reserved.</p>
       </div>
     </footer>
+
   </body>
 </html>
