@@ -1,2 +1,4 @@
-/app-ads.txt 200
-/* /index.html 200
+# No rewrite rules on purpose.
+# The old catch-all ("/* /index.html 200") was removed: every page is now a real static file,
+# and unknown URLs fall through to the host's standard 404 (served from /404.html with a 404 status).
+# Existing public files (app-ads.txt, robots.txt, privacy/*, Search Console file) are served as-is.

@@ -1,0 +1,104 @@
+/* Studio homepage + games index */
+.ambient {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 78% 8%, var(--amb-a, rgba(100,204,224,.10)), transparent 70%),
+    radial-gradient(50% 45% at 12% 30%, var(--amb-b, rgba(212,175,55,.07)), transparent 70%),
+    var(--ink-1000);
+  transition: background var(--dur-3) var(--ease);
+}
+
+/* hero */
+.hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem); }
+.hero-grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
+.hero h1 { margin: 1.2rem 0 1.4rem; }
+.hero .lede { margin-bottom: 2rem; }
+.hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+
+.portals { display: grid; grid-template-columns: 1fr 1.18fr 1fr; gap: clamp(.6rem, 1.4vw, 1.1rem); align-items: end; height: clamp(360px, 44vw, 560px); }
+.portal {
+  position: relative; display: block; height: var(--h); border-radius: var(--arch); overflow: hidden; background: var(--ink-800); isolation: isolate;
+  box-shadow: 0 0 0 1px var(--hair), 0 24px 60px rgba(0,0,0,.5);
+  transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2), filter var(--dur-2);
+}
+.portal > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.portal::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(7,8,10,.1), rgba(7,8,10,.82)); transition: opacity var(--dur-2); }
+.portal .label { position: absolute; left: 0; right: 0; bottom: 1.1rem; text-align: center; font: 600 .68rem/1.5 var(--f-ui); letter-spacing: .16em; text-transform: uppercase; padding-inline: .4rem; }
+.portal .label b { display: block; font: 600 1.05rem/1.25 var(--f-display); letter-spacing: 0; text-transform: none; color: #fff; }
+.portals:hover .portal:not(:hover) { filter: saturate(.7) brightness(.8); }
+a.portal:hover, a.portal:focus-visible { transform: translateY(-8px); }
+a.portal:hover::before { opacity: .35; }
+.p-ce { --h: 84%; box-shadow: 0 0 0 1px rgba(100,204,224,.4), 0 24px 70px rgba(100,204,224,.18); }
+.p-ce .label em { color: #fc944c; }
+.p-gr { --h: 100%; box-shadow: 0 0 0 1px rgba(212,175,55,.5), 0 24px 70px rgba(30,91,58,.35); }
+.p-gr > img { object-position: 30% 50%; }
+.p-gr .label em { color: #5ad49a; }
+.label em { font-style: normal; }
+.p-next { --h: 70%; background: radial-gradient(70% 60% at 50% 100%, rgba(212,175,55,.14), transparent 70%), var(--ink-900); border: 1px dashed var(--hair); box-shadow: none; }
+.p-next::before { display: none; }
+.p-next i { position: absolute; inset: 0; display: grid; place-items: center; font: 500 4.5rem var(--f-display); font-style: normal; color: rgba(212,175,55,.3); }
+.p-next .label { color: var(--paper-300); }
+
+/* featured game (themed by data-game on the section) */
+.feat { position: relative; overflow: hidden; border-block: 1px solid rgba(100,204,224,.18); background: #05070f; color: var(--g-text); }
+.feat::before { content: ""; position: absolute; inset: 0; background: url(/assets/img/ce/nebula.webp) 50% 50% / cover; opacity: .55; }
+.feat::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #05070f 8%, rgba(5,7,15,.55) 55%, rgba(5,7,15,.15)); }
+.feat-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: center; padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.feat .eyebrow { color: #64cce0; }
+.ce-mark { display: block; font: 500 clamp(1.1rem, 2vw, 1.4rem)/1 var(--f-ui); letter-spacing: .5em; text-indent: .5em; color: #eaf2fb; margin: 1.1rem 0 .3rem; text-transform: uppercase; }
+.ce-word { display: block; font: 800 clamp(3rem, 7.4vw, 6rem)/.9 var(--f-ui); color: #eaf2fb; letter-spacing: -.03em; text-transform: uppercase; }
+.ce-tag { margin: 1.3rem 0 1rem; font: 600 .9rem var(--f-ui); letter-spacing: .3em; color: #64cce0; text-transform: uppercase; }
+.feat .lede { color: #b4c3d8; margin-bottom: 1.8rem; }
+.feat-actions { display: flex; gap: .9rem; align-items: center; flex-wrap: wrap; }
+.feat-media { position: relative; height: clamp(340px, 40vw, 520px); }
+.feat-ship { position: absolute; right: 0; top: 0; width: 64%; filter: drop-shadow(0 0 60px rgba(255,122,46,.45)); animation: float 9s ease-in-out infinite; }
+.phone { position: absolute; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px rgba(100,204,224,.25), 0 30px 70px rgba(0,0,0,.65); background: #05070f; aspect-ratio: 9/16; }
+.phone img { width: 100%; height: 100%; object-fit: cover; }
+.ph1 { width: 36%; left: 6%; bottom: -6%; transform: rotate(-5deg); }
+.ph2 { width: 36%; left: 38%; bottom: -12%; transform: rotate(3deg); z-index: 2; }
+@keyframes float { 50% { transform: translateY(-14px); } }
+
+/* library */
+.lib-head { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+
+/* about / meet kanny */
+.kanny-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.k-frame {
+  position: relative; aspect-ratio: 4/5; max-width: 440px; margin-inline: auto; width: 100%; border-radius: var(--arch); overflow: hidden;
+  background: radial-gradient(80% 60% at 50% 30%, rgba(212,175,55,.2), transparent 70%), linear-gradient(180deg, #15171b, #0a0b0d);
+  box-shadow: inset 0 0 0 1px var(--hair), 0 30px 80px rgba(0,0,0,.6);
+}
+.k-frame img { position: absolute; left: 50%; top: 3%; width: 104%; max-width: none; transform: translateX(-50%); }
+.k-body .h2 { margin: 1rem 0 1.2rem; }
+.k-body .lede { margin-bottom: 1.6rem; }
+.quote { margin: 1.8rem 0; padding-left: 1.2rem; border-left: 2px solid var(--gold-500); font: italic 500 clamp(1.3rem, 2.4vw, 1.8rem)/1.35 var(--f-display); color: var(--gold-300); }
+.quote cite { display: block; margin-top: .5rem; font: 600 .72rem var(--f-ui); font-style: normal; letter-spacing: .16em; text-transform: uppercase; color: var(--paper-300); }
+.beliefs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.beliefs div { padding-top: 1rem; border-top: 1px solid var(--hair); }
+.beliefs h3 { font: 600 1.15rem var(--f-display); color: var(--paper-100); margin-bottom: .25rem; }
+.beliefs p { font-size: .9rem; color: var(--paper-300); line-height: 1.5; }
+
+/* games index */
+.page-head { padding-block: clamp(2.5rem, 6vw, 4.5rem) 1rem; }
+.page-head h1 { margin: .8rem 0 1rem; }
+
+@media (max-width: 900px) {
+  .hero-grid, .feat-grid, .kanny-grid { grid-template-columns: 1fr; }
+  .portals { height: 420px; }
+  .feat::before { background-position: 50% 100%; }
+  .feat-media { height: 420px; margin-top: 1rem; }
+  .feat-ship { right: 2%; top: -6%; width: 48%; }
+  .ph1 { width: 29%; left: 0; }
+  .ph2 { width: 29%; left: 25%; }
+  .beliefs { grid-template-columns: 1fr; }
+  .hero-chip { display: none; }
+}
+@media (max-width: 560px) {
+  .portals { grid-template-columns: 1fr 1.15fr; height: 380px; }
+  .p-next { display: none; }
+  .feat-media { height: 460px; }
+  .feat-ship { width: 62%; top: -2%; }
+  .ph1 { width: 42%; left: 0; }
+  .ph2 { width: 42%; left: 30%; }
+  .k-frame { max-width: 320px; }
+}

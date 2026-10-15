@@ -1,0 +1,28 @@
+# Local design / review artifacts (not part of the deployed site).
+# The host publishes everything in the repo root, so keep these out of Git.
+design-preview/
+design-inputs/
+docs/
+*.tmp
+*.log
+*.pyc
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor metadata
+.idea/
+.vscode/
+
+# Local scratch / headless render output
+scratch/
+tmp/
+*.orig
